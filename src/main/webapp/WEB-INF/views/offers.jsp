@@ -3,15 +3,17 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title>Home</title>
+    <title>Offers</title>
 </head>
 
 <body>
-<h1>Hello world!</h1>
-<p>테스트 = ${serverTime}.</p>
-<br><br>
-<p> <a href="${pageContext.request.contextPath}/offers"> Show current Offers</a> </p>
+<h1>Offers</h1>
 
+    <c:forEach var="offer" items="${offers}">
+        <p>
+            <c:out value="${offer}"></c:out>
+        </p>
+    </c:forEach>
 </body>
 
 
